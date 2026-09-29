@@ -207,3 +207,135 @@ footer {
     font-size: 1.8rem;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222222;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111111;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #e6900e;
+}
+
+.phone-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e6900e;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #e6900e;
+  color: #ffffff;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: #d1800a;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 8px 15px;
+  margin-top: 15px;
+}
+
+.content-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+}
