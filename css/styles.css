@@ -339,3 +339,53 @@ footer {
   margin-top: 50px;
   font-size: 14px;
 }
+/* Ensure the parent item acts as the positioning anchor */
+nav ul li.dropdown {
+  position: relative;
+}
+
+/* Hide the dropdown menu by default and position it floating underneath */
+nav ul li.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px;
+  max-height: 400px; /* Optional: adds a scrollbar if the list is long */
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+/* Display items vertically inside the dropdown */
+nav ul li.dropdown .dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
+/* Style the dropdown links */
+nav ul li.dropdown .dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #333333;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Hover effect on dropdown links */
+nav ul li.dropdown .dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+  color: #b89762;
+}
+
+/* Reveal the menu when hovering over Residential or Commercial */
+nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}
