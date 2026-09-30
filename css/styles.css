@@ -326,29 +326,70 @@ footer {
   font-size: 14px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
+/* ==========================================================================
+   MOBILE RESPONSIVE NAVIGATION
+   ========================================================================== */
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+  }
+
   .nav-container {
     flex-direction: column;
     height: auto;
-    padding: 15px 20px;
-    gap: 15px;
+    padding: 15px 10px;
+    gap: 12px;
   }
+
+  .logo a {
+    font-size: 18px;
+    text-align: center;
+  }
+
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px 12px;
+    height: auto;
   }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 4px 6px;
+    height: auto;
+  }
+
+  .header-actions {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .phone-link {
+    font-size: 14px;
+  }
+
+  .btn-book {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* Mobile Dropdown Fix */
   .mega-menu {
     position: static;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: none;
-    display: none;
-    opacity: 1;
-    visibility: visible;
+    width: 100%;
     transform: none;
-    pointer-events: auto;
+    box-shadow: none;
+    grid-template-columns: 1fr; /* Stack columns vertically on phones */
+    gap: 15px;
+    padding: 15px;
+    display: none; /* Hide by default on mobile */
   }
+
   .nav-item:hover .mega-menu {
     display: grid;
+    transform: none;
   }
 }
