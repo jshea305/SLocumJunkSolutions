@@ -451,3 +451,183 @@ footer {
   color: var(--gray-text);
   background-color: var(--light-bg);
 }
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+.site-footer {
+  background-color: var(--brand-dark, #1a1a1a);
+  color: #cccccc;
+  padding: 50px 0 0 0;
+  margin-top: 60px;
+  border-top: 4px solid var(--primary-orange, #E5941A);
+  font-family: var(--font-family);
+}
+
+.footer-container {
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Hero Text Section */
+.footer-hero-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333333;
+}
+
+.footer-hero-text h2 {
+  color: var(--white, #ffffff);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footer-hero-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aaaaaa;
+}
+
+/* Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-col h3, 
+.footer-col h4 {
+  color: var(--white, #ffffff);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h3::after,
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--primary-orange, #E5941A);
+}
+
+/* Service Area Styling */
+.service-lead {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.towns-list {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #aaaaaa;
+  margin-bottom: 18px;
+}
+
+.footer-contact-info p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footer-contact-info a {
+  color: var(--primary-orange, #E5941A);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-info a:hover {
+  color: var(--primary-hover, #cf800a);
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--primary-orange, #E5941A);
+  padding-left: 4px;
+}
+
+/* Hours List */
+.footer-hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer-hours-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #333333;
+  padding-bottom: 4px;
+  color: #aaaaaa;
+}
+
+.footer-hours-list span {
+  color: var(--white, #ffffff);
+  font-weight: 600;
+}
+
+.btn-footer-cta {
+  display: inline-block;
+  background-color: var(--primary-orange, #E5941A);
+  color: var(--white, #ffffff);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-footer-cta:hover {
+  background-color: var(--primary-hover, #cf800a);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #333333;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 850px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
