@@ -275,6 +275,21 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+/* Restrain images to card containers */
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
 .card h3, .card-title {
   font-size: 1.4rem;
