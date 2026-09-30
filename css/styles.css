@@ -339,53 +339,201 @@ footer {
   margin-top: 50px;
   font-size: 14px;
 }
-/* Ensure the parent item acts as the positioning anchor */
-nav ul li.dropdown {
-  position: relative;
+/* Base Styles */
+:root {
+  --primary-orange: #E5941A;
+  --primary-hover: #d1820f;
+  --dark-text: #222222;
+  --gray-text: #555555;
+  --light-bg: #f9f9f9;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hide the dropdown menu by default and position it floating underneath */
-nav ul li.dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 240px;
-  max-height: 400px; /* Optional: adds a scrollbar if the list is long */
-  overflow-y: auto;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  border-radius: 4px;
-  list-style: none;
-  padding: 8px 0;
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+}
+
+/* Header Container */
+.site-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: relative;
   z-index: 1000;
 }
 
-/* Display items vertically inside the dropdown */
-nav ul li.dropdown .dropdown-menu li {
-  display: block;
-  width: 100%;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 80px;
 }
 
-/* Style the dropdown links */
-nav ul li.dropdown .dropdown-menu li a {
-  display: block;
-  padding: 8px 16px;
-  color: #333333;
+/* Logo */
+.logo a {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark-text);
   text-decoration: none;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Hover effect on dropdown links */
-nav ul li.dropdown .dropdown-menu li a:hover {
-  background-color: #f4f4f4;
-  color: #b89762;
+.logo span {
+  color: var(--primary-orange);
 }
 
-/* Reveal the menu when hovering over Residential or Commercial */
-nav ul li.dropdown:hover .dropdown-menu {
+/* Navigation Links */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-orange);
+}
+
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 9px;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu Dropdown */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 900px;
+  background-color: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-top: 4px solid var(--primary-orange);
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+  pointer-events: none;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Open Mega Menu on Hover */
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* Mega Menu Column Styles */
+.menu-column h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-orange);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.menu-column ul {
+  list-style: none;
+}
+
+.menu-column li {
+  margin-bottom: 8px;
+}
+
+.menu-column a {
+  text-decoration: none;
+  color: var(--gray-text);
+  font-size: 13.5px;
+  line-height: 1.4;
+  transition: color 0.2s ease, padding-left 0.2s ease;
   display: block;
+}
+
+.menu-column a:hover {
+  color: var(--dark-text);
+  padding-left: 4px;
+  font-weight: bold;
+}
+
+/* Header Actions (Phone & CTA) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.phone-link {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone-link:hover {
+  color: var(--primary-orange);
+}
+
+.btn-book {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-book:hover {
+  background-color: var(--primary-hover);
 }
