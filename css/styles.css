@@ -153,10 +153,11 @@ body {
 }
 
 /* Open Mega Menu on Hover */
-.nav-item:hover .mega-menu {
+.nav-item:hover .mega-menu,
+.nav-item.active .mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
   pointer-events: auto;
 }
 
@@ -376,19 +377,24 @@ footer {
     font-size: 12px;
   }
 
-  /* Mobile Dropdown Fix */
+ /* Mobile Dropdown Fix */
   .mega-menu {
     position: static;
+    left: auto;
     width: 100%;
+    max-width: 100%;
     transform: none;
     box-shadow: none;
-    grid-template-columns: 1fr; /* Stack columns vertically on phones */
+    grid-template-columns: 1fr; /* Stack columns vertically on mobile */
     gap: 15px;
     padding: 15px;
     display: none; /* Hide by default on mobile */
+    opacity: 1;
+    visibility: visible;
   }
 
-  .nav-item:hover .mega-menu {
+  .nav-item:hover .mega-menu,
+  .nav-item.active .mega-menu {
     display: grid;
     transform: none;
   }
