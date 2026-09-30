@@ -170,4 +170,23 @@
   </footer>
 
 </body>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const navItem = dropdownToggle.closest('.nav-item');
+
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevents the link jump/flash
+      navItem.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside of it
+    document.addEventListener('click', function(e) {
+      if (!navItem.contains(e.target)) {
+        navItem.classList.remove('active');
+      }
+    });
+  });
+</script>
 </html>
