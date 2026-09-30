@@ -326,7 +326,20 @@ footer {
   margin-top: 60px;
   font-size: 14px;
 }
+/* Card & Image Container Scaling */
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
 
+.image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* ==========================================================================
    MOBILE RESPONSIVE NAVIGATION
    ========================================================================== */
@@ -378,7 +391,7 @@ footer {
   }
 
   /* Mobile Dropdown Overrides */
-  .mega-menu {
+ .mega-menu {
     position: static !important;
     left: auto !important;
     width: 100% !important;
@@ -394,7 +407,7 @@ footer {
     pointer-events: auto !important;
   }
 
-  .nav-item:hover .mega-menu,
+  /* Show menu ONLY when JS adds the .active class */
   .nav-item.active .mega-menu {
     display: grid !important;
     transform: none !important;
