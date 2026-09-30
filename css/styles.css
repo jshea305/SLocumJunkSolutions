@@ -437,7 +437,12 @@ body {
 .nav-item:hover .dropdown-toggle::after {
   transform: rotate(180deg);
 }
-
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 /* Update the mega-menu positioning */
 .mega-menu {
   position: absolute;
