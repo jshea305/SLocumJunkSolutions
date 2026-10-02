@@ -818,7 +818,7 @@ footer {
     padding-bottom: 12px;
   }
 }
- <style>
+
     .form-group {
       margin-bottom: 20px;
     }
@@ -840,4 +840,4 @@ footer {
       height: 140px;
       resize: vertical;
     }
-  </style>
+
