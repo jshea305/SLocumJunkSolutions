@@ -994,13 +994,61 @@ footer {
   color: #495057;
   line-height: 1.4;
 }
-/* Outer Master Card Container */
+/* Outer Section Background */
+.before-after-section {
+  padding: 3rem 1rem;
+  background-color: #f1f5f9; /* Subtle gray background so the white card pops */
+}
+
+/* Master Outer Card */
 .transformation-wrapper-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 3rem 2rem;
+  padding: 2rem 1.25rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid #e2e8f0;
   max-width: 1150px;
   margin: 0 auto;
+}
+
+/* Section Heading Responsiveness */
+.transformation-wrapper-card .section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2.25rem); /* Dynamically shrinks heading on mobile screens */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.transformation-wrapper-card .section-subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Inner Cards - Added distinct contrast border & shadow */
+.transformation-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border: 1px solid #cbd5e1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Mobile Screen Padding Adjustments */
+@media (max-width: 600px) {
+  .transformation-wrapper-card {
+    padding: 1.5rem 0.85rem;
+    border-radius: 12px;
+  }
+  
+  .before-after-grid {
+    gap: 1.25rem;
+  }
 }
