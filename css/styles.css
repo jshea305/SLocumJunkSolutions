@@ -907,7 +907,24 @@ footer {
   background-color: #f1f5f9;
   overflow: hidden; /* Prevents child elements from spilling out horizontally */
 }
+/* BEFORE & AFTER Badge Styling */
+.badge-before {
+  background-color: #dc2626; /* Red badge */
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
 
+.badge-after {
+  background-color: #16a34a; /* Green badge */
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
 .transformation-wrapper-card {
   width: 100%;
   max-width: 1150px;
