@@ -994,3 +994,13 @@ footer {
   color: #495057;
   line-height: 1.4;
 }
+/* Outer Master Card Container */
+.transformation-wrapper-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  max-width: 1150px;
+  margin: 0 auto;
+}
