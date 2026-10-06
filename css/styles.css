@@ -910,21 +910,39 @@ footer {
 /* BEFORE & AFTER Badge Styling */
 .badge {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 4px 8px;
   font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .before-badge {
-  background-color: #dc2626; /* Red badge */
+  background-color: #dc2626; /* Bright Red */
   color: #ffffff;
 }
 
 .after-badge {
-  background-color: #16a34a; /* Green badge */
+  background-color: #16a34a; /* Bright Green */
   color: #ffffff;
+}
+.card-caption {
+  padding: 12px 16px;
+  background-color: #ffffff;
+}
+
+.card-caption h3 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.card-caption p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #475569;
 }
 .transformation-wrapper-card {
   width: 100%;
