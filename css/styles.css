@@ -908,22 +908,23 @@ footer {
   overflow: hidden; /* Prevents child elements from spilling out horizontally */
 }
 /* BEFORE & AFTER Badge Styling */
-.badge-before {
-  background-color: #dc2626; /* Red badge */
-  color: #ffffff;
-  padding: 2px 8px;
-  border-radius: 4px;
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
   font-size: 0.75rem;
   font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
-.badge-after {
+.before-badge {
+  background-color: #dc2626; /* Red badge */
+  color: #ffffff;
+}
+
+.after-badge {
   background-color: #16a34a; /* Green badge */
   color: #ffffff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: bold;
 }
 .transformation-wrapper-card {
   width: 100%;
