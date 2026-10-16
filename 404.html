@@ -4,20 +4,75 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    // Map legacy URLs to current site pages
+    // Complete mapping of all legacy GoDaddy Residential & Commercial subpages to active clean paths
     var pathMap = {
+      // Main legacy section landing pages
       '/residential': '/',
-     '/residential.html': '/',
-      '/residential-1': '/',
-      '/dumpster-rental': '/services',
-      '/contact.html': '/contact',
-      '/reviews.html': '/reviews'
+      '/residential.html': '/',
+      '/commercial': '/services.html#commercial',
+      '/commercial.html': '/services.html#commercial',
+      '/contact': '/contact.html',
+      '/contact-us': '/contact.html',
+      '/reviews': '/reviews.html',
+
+      // GoDaddy "Commercial" subpages (both direct and nested under /commercial/)
+      '/office-retail-cleanouts': '/services.html#commercial',
+      '/office-retail-cleanouts.html': '/services.html#commercial',
+      '/commercial/office-retail-cleanouts': '/services.html#commercial',
+      '/and-more': '/services.html',
+      '/and-more.html': '/services.html',
+      '/commercial/and-more': '/services.html',
+
+      // GoDaddy "Residential" & shared subpages (direct + nested variants)
+      '/basement-cleanout': '/services.html#cleanouts',
+      '/basement-cleanout.html': '/services.html#cleanouts',
+      '/residential/basement-cleanout': '/services.html#cleanouts',
+      '/boat-removal': '/services.html#outdoor',
+      '/boat-removal.html': '/services.html#outdoor',
+      '/residential/boat-removal': '/services.html#outdoor',
+      '/camper-removal': '/services.html#outdoor',
+      '/camper-removal.html': '/services.html#outdoor',
+      '/residential/camper-removal': '/services.html#outdoor',
+      '/demolition': '/services.html#demolition',
+      '/demolition.html': '/services.html#demolition',
+      '/disaster-debris-cleanup': '/services.html#demolition',
+      '/disaster-debris-cleanup.html': '/services.html#demolition',
+      '/donation-pickup': '/services.html#commercial',
+      '/donation-pickup.html': '/services.html#commercial',
+      '/dump-runs': '/services.html#demolition',
+      '/dump-runs.html': '/services.html#demolition',
+      '/dumpster-rental': '/services.html#commercial',
+      '/dumpster-rental.html': '/services.html#commercial',
+      '/estate-cleanout': '/services.html#cleanouts',
+      '/estate-cleanout.html': '/services.html#cleanouts',
+      '/fence-removal': '/services.html#outdoor',
+      '/fence-removal.html': '/services.html#outdoor',
+      '/foreclosure-cleanout': '/services.html#cleanouts',
+      '/foreclosure-cleanout.html': '/services.html#cleanouts',
+      '/hoarder-cleanout': '/services.html#cleanouts',
+      '/hoarder-cleanout.html': '/services.html#cleanouts',
+      '/hot-tub-removal': '/services.html#outdoor',
+      '/hot-tub-removal.html': '/services.html#outdoor',
+      '/indoor-junk-removal': '/services.html#cleanouts',
+      '/indoor-junk-removal.html': '/services.html#cleanouts',
+      '/interior-demolition': '/services.html#demolition',
+      '/interior-demolition.html': '/services.html#demolition',
+      '/mattress-removal': '/services.html#demolition',
+      '/mattress-removal.html': '/services.html#demolition',
+      '/playset-removal': '/services.html#outdoor',
+      '/playset-removal.html': '/services.html#outdoor',
+      '/pre-listing-cleanouts': '/services.html#cleanouts',
+      '/pre-listing-cleanouts.html': '/services.html#cleanouts',
+      '/snow-removal-and-hauling': '/services.html#outdoor',
+      '/snow-removal-and-hauling.html': '/services.html#outdoor',
+      '/storage-unit-cleanout': '/services.html#cleanouts',
+      '/storage-unit-cleanout.html': '/services.html#cleanouts'
     };
 
-    var currentPath = window.location.pathname;
+    var currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '');
     var cleanPath = pathMap[currentPath] || '/';
 
-    // Immediate JS redirect to active page
+    // Immediate client-side redirect
     window.location.replace(cleanPath);
   </script>
 </head>
