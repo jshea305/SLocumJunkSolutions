@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="https://www.google.com/recaptcha/api.js?render=6Ld9mPotAAAAAKfAmv5CLOFaPN8p994kxaq38FdI"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVN3PSYCXV"></script>
   <script>
@@ -97,6 +98,18 @@
 
       <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
     </form>
+    <script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6Ld9mPotAAAAAKfAmv5CLOFaPN8p994kxaq38FdI', {action: 'submit'}).then(function(token) {
+        document.getElementById('g-recaptcha-response').value = token;
+        form.submit();
+      });
+    });
+  });
+</script>
   </div>
 </main>
 
