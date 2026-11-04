@@ -1,1 +1,128 @@
-
+[
+  {
+    "id": 1,
+    "author": {
+      "name": "Scott Nelson",
+      "avatar": "S"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Their name was given to us by a very good friend who had some work done. They were extremely professional in how they demolished a shed that was in our yard, and then a week later we had them come in and remove basically everything.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Scott, thank you for having us for these projects! It was a pleasure working with you and we would be happy to help with whatever else you need!"
+    }
+  },
+  {
+    "id": 2,
+    "author": {
+      "name": "Rita Clifford Toolin",
+      "avatar": "R"
+    },
+    "rating": 5,
+    "source": "Facebook",
+    "reviewText": "Ryan and Kyle are a great team. It was easy to communicate with them when scheduling their services to clean out my shed. They were quick, efficient, and thorough. I would use them again.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you Rita for choosing our services for your shed cleanout! We're glad to help."
+    }
+  },
+  {
+    "id": 3,
+    "author": {
+      "name": "Allie Readyhough",
+      "avatar": "A"
+    },
+    "rating": 5,
+    "source": "Facebook",
+    "reviewText": "Kyle and Ryan make an amazing team and have without a doubt played a major role in what originally seemed like an impossible project. They've helped me significantly with taking over an investment property left in disrepair.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "We are delighted to hear that Allie! We're always glad to help. Our team is dedicated to providing top-notch service."
+    }
+  },
+  {
+    "id": 4,
+    "author": {
+      "name": "KRL",
+      "avatar": "K"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Highly recommend Ryan and Kyle and their crew at Slocum Junk Removal! Responsive, efficient, friendly, and hard working. They were quick to provide a quote, schedule a pick up, and were very communicative and professional.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you for the 5 stars! We appreciate your kind words and we are here if you need help in the future."
+    }
+  },
+  {
+    "id": 5,
+    "author": {
+      "name": "Bryan Larson",
+      "avatar": "B"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "The team was fantastic with our demo project and removal of an old buckled cement walkway. Great communication in planning the job and very professional work. The cleanup they did to leave the area in great shape was better than I expected.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Bryan, we are happy to have assisted you with this project! We appreciate the kind words and are glad to hear you were pleased with our work."
+    }
+  },
+  {
+    "id": 6,
+    "author": {
+      "name": "terri Daniel",
+      "avatar": "T"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "I can't say enough about Ryan and Kyle of Slocum Junk Solutions. My husband and I reside in North Kingstown and we use Slocum Junk Solutions as our snow removal service. They are extremely responsive and very professional. We HIGHLY recommend them!!",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Terri! We appreciate your support."
+    }
+  },
+  {
+    "id": 7,
+    "author": {
+      "name": "Cheryl Major",
+      "avatar": "C"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Ryan & Kyle of Slocum Junk Solutions quickly responded to our request for a quote for some outside work we needed. While they are a junk removal team, they do so much more!! They cleared my entire yard of a bunch of debris.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Cheryl! We are pleased to hear this. Thank you again for having us, and we are here whenever you need us."
+    }
+  },
+  {
+    "id": 8,
+    "author": {
+      "name": "Chris Allenson",
+      "avatar": "C"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Kyle and Ryan were awesome! They were so responsive and prices were competitive. It was great to have a local company come out to remove a large, heavy old couch! We would use them again without hesitation!",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thanks, Chris! We appreciate you having us and we are here to help if you need us in the future."
+    }
+  },
+  {
+    "id": 9,
+    "author": {
+      "name": "Jeff Robar",
+      "avatar": "J"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Kyle and Ryan helped me on short notice to get rid of a couple of large items in the garage. This is the first time I've used Slocum Junk Solutions and won't hesitate to use them again. Highly recommend.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thanks Jeff! It was a pleasure assisting you and we are here whenever you need us."
+    }
+  }
+]
