@@ -1,5 +1,117 @@
 [
   {
+    "id": 10,
+    "author": {
+      "name": "Patty “Unknown Asian Powerlifter” T...",
+      "avatar": "P"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Great communication and scheduling was quick. The 3 gentlemen were professional, quick and efficient. I would highly recommend Slocum Junk Solutions.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "It was our pleasure. Thank you for having us!"
+    }
+  },
+  {
+    "id": 11,
+    "author": {
+      "name": "Robin Malafronte",
+      "avatar": "R"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "I highly recommend Slocum Junk !!! The men were extremely professional and courteous. The were timely. Gave an excellent quote and did a fantastic job !!! Spread the word",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thanks Robin! We appreciate you having us by."
+    }
+  },
+  {
+    "id": 12,
+    "author": {
+      "name": "Margaret O'Connor",
+      "avatar": "M"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Fast response, on time, polite, and professional. All junk quickly removed. Highly recommended!",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Margaret!"
+    }
+  },
+  {
+    "id": 13,
+    "author": {
+      "name": "Carin",
+      "avatar": "C"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "We highly recommend Ryan and Kyle of Slocum Junk Solutions. Not only were they quick respond to my online inquiry but they were also very communicative and flexible throughout the entire process...",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, we were glad to help!"
+    }
+  },
+  {
+    "id": 14,
+    "author": {
+      "name": "Dana Oliveira",
+      "avatar": "D"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "Professional, great communication, fast work, kind young men...Give them a try. You won't be disappointed!",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Dana!"
+    }
+  },
+  {
+    "id": 15,
+    "author": {
+      "name": "Michael Misurelli",
+      "avatar": "M"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "This company is very professional and reliable, Incredible service! Highly recommend these guys for all of your removal needs. Will be using them again, Thank you!",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you for having us! We look forward to working with you again soon."
+    }
+  },
+  {
+    "id": 16,
+    "author": {
+      "name": "Paula Barlow",
+      "avatar": "P"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "I called Slocum Junk Solutions because they were referred to me by word of mouth. I talked to Ryan on the phone and he was very helpful. Next, Kyle came to my house to haul away junk from my garage. He was polite and friendly.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Paula! It was nice meeting you, and we are here if you need assisstance in the future."
+    }
+  },
+  {
+    "id": 17,
+    "author": {
+      "name": "Katherine Gifford",
+      "avatar": "K"
+    },
+    "rating": 5,
+    "source": "Google",
+    "reviewText": "These guys are the best. Called them to help get rid of some drywall we pulled down in the basement. Also get rid of a fridge, old furniture and mattress. They showed up right when they said they would. Got right to work.",
+    "ownerResponse": {
+      "responder": "Slocum Junk Solutions",
+      "responseText": "Thank you, Kathy! It was our pleasure, we are here to help when you are ready for part 2."
+    }
+  },
+  {
     "id": 1,
     "author": {
       "name": "Scott Nelson",
