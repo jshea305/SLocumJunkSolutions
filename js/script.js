@@ -1,48 +1,52 @@
- async function fetchAndRenderReviews() {
-      try {
-        // Fetch JSON data from file
-        const response = await fetch('fetch('./reviews.json')');
-        const reviews = await response.json();
+function renderCards(reviews) {
+  const container = document.getElementById('reviews-container');
+  if (!container) return;
 
-        const container = document.getElementById('reviews-container');
+  container.innerHTML = reviews.map(review => {
+    const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+    const sourceClass = review.source.toLowerCase();
 
-        container.innerHTML = reviews.map(review => {
-          const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
-          const sourceClass = review.source.toLowerCase();
+    const ownerResponseHtml = review.ownerResponse ? `
+      <div class="owner-response">
+        <strong>Response from ${review.ownerResponse.responder}:</strong>
+        "${review.ownerResponse.responseText}"
+      </div>
+    ` : '';
 
-          const ownerResponseHtml = review.ownerResponse ? `
-            <div class="owner-response">
-              <strong>Response from ${review.ownerResponse.responder}:</strong>
-              "${review.ownerResponse.responseText}"
-            </div>
-          ` : '';
-
-          return `
-            <article class="review-card-text">
-              <div>
-                <div class="review-header">
-                  <div class="author-info">
-                    <div class="avatar">${review.author.avatar}</div>
-                    <div class="author-details">
-                      <h3>${review.author.name}</h3>
-                      <div class="review-stars">${stars}</div>
-                    </div>
-                  </div>
-                  <span class="source-badge ${sourceClass}">${review.source}</span>
-                </div>
-                <p class="review-body">
-                  "${review.reviewText}"
-                </p>
+    return `
+      <article class="review-card-text">
+        <div>
+          <div class="review-header">
+            <div class="author-info">
+              <div class="avatar">${review.author.avatar}</div>
+              <div class="author-details">
+                <h3>${review.author.name}</h3>
+                <div class="review-stars">${stars}</div>
               </div>
-              ${ownerResponseHtml}
-            </article>
-          `;
-        }).join('');
+            </div>
+            <span class="source-badge ${sourceClass}">${review.source}</span>
+          </div>
+          <p class="review-body">
+            "${review.reviewText}"
+          </p>
+        </div>
+        ${ownerResponseHtml}
+      </article>
+    `;
+  }).join('');
+}
 
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
+async function fetchAndRenderReviews() {
+  try {
+    const response = await fetch('data/reviews.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    const reviews = await response.json();
+    renderCards(reviews);
+  } catch (error) {
+    console.error('Error fetching data/reviews.json:', error);
+  }
+}
 
-    document.addEventListener('DOMContentLoaded', fetchAndRenderReviews);
-
+document.addEventListener('DOMContentLoaded', fetchAndRenderReviews);
