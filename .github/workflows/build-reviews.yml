@@ -1,1 +1,27 @@
+name: Pre-render Reviews HTML
 
+on:
+  push:
+    paths:
+      - 'data/reviews.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run review generator
+        run: node scripts/generate-reviews.js
+
+      - name: Commit updated HTML
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "auto: pre-render reviews HTML from JSON update"
+          file_pattern: 'reviews.html'
