@@ -1,7 +1,10 @@
-// generate-reviews.js
 const fs = require('fs');
+const path = require('path');
 
-const rawData = fs.readFileSync('./data/reviews.json', 'utf8');
+const jsonPath = path.join(__dirname, '..', 'data', 'reviews.json');
+const htmlPath = path.join(__dirname, '..', 'reviews.html');
+
+const rawData = fs.readFileSync(jsonPath, 'utf8');
 const reviews = JSON.parse(rawData);
 
 const htmlCards = reviews.map(review => {
@@ -37,4 +40,10 @@ const htmlCards = reviews.map(review => {
   `;
 }).join('\n');
 
-console.log(htmlCards);
+// Read existing reviews.html and replace content inside #reviews-container
+let pageHtml = fs.readFileSync(htmlPath, 'utf8');
+const containerRegex = /(<div id="reviews-container">)([\s\S]*?)(<\/div>)/;
+
+pageHtml = pageHtml.replace(containerRegex, `$1\n${htmlCards}\n$3`);
+fs.writeFileSync(htmlPath, pageHtml, 'utf8');
+console.log('Successfully pre-rendered reviews into reviews.html!');
