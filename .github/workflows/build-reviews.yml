@@ -22,7 +22,7 @@ jobs:
           node-version: '20'
 
       - name: Run review generator
-        run: node scripts/generate-reviews.js
+        run: node js/generate-reviews.js
 
       - name: Commit updated HTML
         uses: stefanzweifel/git-auto-commit-action@v5
