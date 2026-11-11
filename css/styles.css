@@ -1135,7 +1135,7 @@ footer {
   text-align: center;
 }
 .hero-contact {
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), 
               url('../images/SJS-Trailer.jpg'); /* Or another image like contact.jpg */
   background-size: cover;
   background-position: center;
