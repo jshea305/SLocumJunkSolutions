@@ -1084,3 +1084,13 @@ footer {
   color: #475569;
   line-height: 1.4;
 }
+.hero-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('your-image-filename.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff; /* Ensures text stays clear and readable */
+  padding: 80px 20px; /* Adjust padding as needed for vertical space */
+  text-align: center;
+}
