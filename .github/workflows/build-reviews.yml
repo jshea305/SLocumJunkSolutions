@@ -1,9 +1,13 @@
 name: Pre-render Reviews HTML
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'data/reviews.json'
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -23,5 +27,5 @@ jobs:
       - name: Commit updated HTML
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "auto: pre-render reviews HTML from JSON update"
+          commit_message: "auto: pre-render reviews HTML"
           file_pattern: 'reviews.html'
