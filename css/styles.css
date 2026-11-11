@@ -1086,7 +1086,7 @@ footer {
 }
 .hero-services {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-              url('../images/services.jpeg');
+              url('../images/services.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
