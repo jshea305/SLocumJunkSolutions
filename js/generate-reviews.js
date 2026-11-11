@@ -40,10 +40,16 @@ const htmlCards = reviews.map(review => {
   `;
 }).join('\n');
 
-// Read existing reviews.html and replace content inside #reviews-container
 let pageHtml = fs.readFileSync(htmlPath, 'utf8');
-const containerRegex = /(<div id="reviews-container">)([\s\S]*?)(<\/div>)/;
 
-pageHtml = pageHtml.replace(containerRegex, `$1\n${htmlCards}\n$3`);
-fs.writeFileSync(htmlPath, pageHtml, 'utf8');
-console.log('Successfully pre-rendered reviews into reviews.html!');
+// Flexible match targeting id="reviews-container" inside <main>
+const containerRegex = /(<main[\s\S]*?id="reviews-container"[\s\S]*?>)([\s\S]*?)(<\/main>)/i;
+
+if (containerRegex.test(pageHtml)) {
+  pageHtml = pageHtml.replace(containerRegex, `$1\n${htmlCards}\n$3`);
+  fs.writeFileSync(htmlPath, pageHtml, 'utf8');
+  console.log('Successfully injected pre-rendered review cards into reviews.html!');
+} else {
+  console.error('ERROR: Could not find id="reviews-container" inside <main> in reviews.html');
+  process.exit(1);
+}
