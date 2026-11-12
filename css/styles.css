@@ -1147,3 +1147,17 @@ footer {
 .hero-header h1, .hero-services h1, .hero-contact h1, .hero-comm h1, .hero-reviews h1, .hero-contact h1, .hero-res h1  {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
 }
+.btn-cta, .btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-cta:hover, .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.service-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
